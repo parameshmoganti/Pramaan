@@ -19,7 +19,7 @@
             <exclude>
                 <file>./app/Http/routes.php</file>
             </exclude>
-        </whitelist>
+    </whitelist>
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
