@@ -2,6 +2,7 @@
 require_once('SDK-PHP/src/APIAutoloader.php');
 
 $client = new OntraportAPI\Ontraport("2_186126_xDklkgrgi","zhu5Ezge5Cs4Sv7");
+/*
 $requestParams = array(
 #	"firstname" => "tim",
  # "lastname" => "lincecum",
@@ -24,5 +25,18 @@ if(array_key_exists("attrs",$json_output->data))
 }
 else{
 	print_r($json_output);}
+ use OntraportAPI\Ontraport;
+
+$client = new Ontraport("2_AppID_12345678","Key5678");
  */
+$conditions = new OntraportAPI\Criteria("email", "=", "indianaoutlaws13u@gmail.com");
+$requestParams = array(
+    "condition" => $conditions->fromArray()
+);
+$response = $client->contact()->retrieveMultiple($requestParams);
+#$response = $client->message()->retrieveCollectionInfo($requestParams);
+$json_output = json_decode($response);
+print_r($json_output);
+exit;
+
 ?>
