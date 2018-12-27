@@ -1,7 +1,11 @@
 <?php
 require_once('SDK-PHP/src/APIAutoloader.php');
-
+use OntraportAPI\ObjectType;
 $client = new OntraportAPI\Ontraport("2_186126_xDklkgrgi","zhu5Ezge5Cs4Sv7");
+
+#$response = $client->contact()->retrieveMeta();
+#print_r($response);
+#exit;
 /*
 $requestParams = array(
 #	"firstname" => "tim",
@@ -29,7 +33,7 @@ else{
 
 $client = new Ontraport("2_AppID_12345678","Key5678");
  */
-$conditions = new OntraportAPI\Criteria("email", "=", "indianaoutlaws13u@gmail.com");
+$conditions = new OntraportAPI\Criteria("email", "=", "mikemccartypita@gmail.com");
 $requestParams = array(
     "condition" => $conditions->fromArray()
 );
